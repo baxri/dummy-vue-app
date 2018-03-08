@@ -1,17 +1,10 @@
 <template>
     <div id="app">
-        <h1>My Todo App!</h1>
-        <!--<TodoList/>-->
+        <h1>My Todo App!</h1>      
     </div>
 </template>
 
 <script>
-    // import TodoList from './components/TodoList.vue'
-
-    // export default {
-    //     components: {
-    //         // TodoList
-    //     }
-    // }
+  
 </script>
 

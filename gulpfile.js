@@ -9,27 +9,34 @@ gulp.task("webpack", function () {
                     {
                         test: /\.vue$/,
                         exclude: /(node_modules|bower_components)/,
-                        use: {
-                            loader: 'vue-loader',                          
+                        
+                        loader: 'vue-loader',
+                        options: {
+                        //   extractCSS: true
                         }
-                    },
+                      },
+                    // {
+                    //     test: /\.vue$/,
+                    //     exclude: /(node_modules|bower_components)/,
+                    //     use: {
+                    //         loader: 'vue-loader',                          
+                    //     }
+                    // },
                     {
                         test: /\.js$/,
                         loader: 'babel-loader',
                         exclude: /node_modules/
-                    },
-                    {
-                        test: /\.(png|jpg|gif|svg)$/,
-                        loader: 'file-loader',
-                        options: {
-                          name: '[name].[ext]?[hash]'
-                        }
                     }
                 ]
             },
             output: {
                 filename: 'app.js'
-            }
+            },
+            resolve: {
+                alias: {
+                  'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+                }
+              }
         }))
         .pipe(gulp.dest("./public/js"));
 });
