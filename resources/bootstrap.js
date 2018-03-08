@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App'
+import App from './components/App.vue'
 
 Vue.config.productionTip = false
 
@@ -9,3 +9,5 @@ new Vue({
     template: '<App/>',
     components: { App }
 })
+
+alert("fsdfd");
