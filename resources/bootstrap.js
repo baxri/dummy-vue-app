@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './components/App.vue'
 
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
@@ -10,4 +10,4 @@ new Vue({
     components: { App }
 })
 
-alert("fsdfd");
+alert("traki");

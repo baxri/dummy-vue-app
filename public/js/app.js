@@ -311,7 +311,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].config.productionTip = false;
+// Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
