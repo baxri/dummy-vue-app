@@ -3,23 +3,23 @@
          <h1>{{message}}</h1>
         <button v-on:click="plus">Plus</button>
         <button v-on:click="minus">Minus</button>
-        <p>{{counter}}</p>      
+        <p>{{initcounter}}</p>      
     </div>
 </template>
 
 <script>
   export default {
+
     mounted() {
         console.log('Component mounted.')
     },
-    props: ['initcounter'],
     data: function(){
        return {
            message: 'Example Counter',
            counter: this.initcounter*1
        }
     },
-
+    props: ['initcounter'],
     methods: {
         plus: function(){
             this.counter++
