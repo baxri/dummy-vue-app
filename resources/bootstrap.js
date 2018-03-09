@@ -1,19 +1,10 @@
 import Vue from 'vue'
-import App from './components/App.vue'
+import Counter from './components/Counter.vue'
 
-// Vue.config.productionTip = false
 
-// Vue.component('App', require('./components/App.vue'))
-
-// register
-// Vue.component('my-component', 'App.')
-
-// create a root instance
 new Vue({
     el: '#app',
-    template: '<App/>',
-    components: { App }
+    template: '<Counter/>',
+    components: { Counter },
 })
   
-
-console.log('jigaro  kaci');

@@ -300,20 +300,23 @@ process.umask = function() { return 0; };
         console.log('Component mounted.');
     },
 
+    props: ['initcounter'],
     data: function data() {
         return {
-            message: 'Helo App',
-            counter: 1
+            message: 'Example Counter',
+            counter: this.initcounter * 1
         };
     },
 
     methods: {
         plus: function plus() {
             this.counter++;
+            console.log(this.counter);
         },
 
         minus: function minus() {
             this.counter--;
+            console.log(this.counter);
         }
 
     }
@@ -326,25 +329,15 @@ process.umask = function() { return 0; };
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_App_vue__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Counter_vue__ = __webpack_require__(7);
 
 
 
-// Vue.config.productionTip = false
-
-// Vue.component('App', require('./components/App.vue'))
-
-// register
-// Vue.component('my-component', 'App.')
-
-// create a root instance
 new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
     el: '#app',
-    template: '<App/>',
-    components: { App: __WEBPACK_IMPORTED_MODULE_1__components_App_vue__["a" /* default */] }
+    template: '<Counter/>',
+    components: { Counter: __WEBPACK_IMPORTED_MODULE_1__components_Counter_vue__["a" /* default */] }
 });
-
-console.log('jigaro  kaci');
 
 /***/ }),
 /* 4 */
@@ -11428,9 +11421,9 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Counter_vue__ = __webpack_require__(2);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_19_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_234c7b8a_hasScoped_false_optionsId_9_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Counter_vue__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_component_normalizer__ = __webpack_require__(9);
 var disposed = false
 /* script */
@@ -11448,15 +11441,15 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 
 var Component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_component_normalizer__["a" /* default */])(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_19_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* render */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_19_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["b" /* staticRenderFns */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Counter_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_234c7b8a_hasScoped_false_optionsId_9_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Counter_vue__["a" /* render */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_234c7b8a_hasScoped_false_optionsId_9_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Counter_vue__["b" /* staticRenderFns */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\components\\App.vue"
+Component.options.__file = "resources\\components\\Counter.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -11465,9 +11458,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-42af3760", Component.options)
+    hotAPI.createRecord("data-v-234c7b8a", Component.options)
   } else {
-    hotAPI.reload("data-v-42af3760", Component.options)
+    hotAPI.reload("data-v-234c7b8a", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -11489,11 +11482,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _c("h1", [_vm._v(_vm._s(_vm.message))]),
+    _vm._v(" "),
     _c("button", { on: { click: _vm.plus } }, [_vm._v("Plus")]),
     _vm._v(" "),
     _c("button", { on: { click: _vm.minus } }, [_vm._v("Minus")]),
-    _vm._v(" "),
-    _c("h1", [_vm._v(_vm._s(_vm.message))]),
     _vm._v(" "),
     _c("p", [_vm._v(_vm._s(_vm.counter))])
   ])
@@ -11504,7 +11497,7 @@ render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-42af3760", { render: render, staticRenderFns: staticRenderFns })
+    require("vue-hot-reload-api")      .rerender("data-v-234c7b8a", { render: render, staticRenderFns: staticRenderFns })
   }
 }
 
