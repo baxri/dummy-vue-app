@@ -9,19 +9,11 @@ gulp.task("webpack", function () {
                     {
                         test: /\.vue$/,
                         exclude: /(node_modules|bower_components)/,
-                        
                         loader: 'vue-loader',
                         options: {
                         //   extractCSS: true
                         }
-                      },
-                    // {
-                    //     test: /\.vue$/,
-                    //     exclude: /(node_modules|bower_components)/,
-                    //     use: {
-                    //         loader: 'vue-loader',                          
-                    //     }
-                    // },
+                      },                 
                     {
                         test: /\.js$/,
                         loader: 'babel-loader',
@@ -45,7 +37,7 @@ gulp.task('default', function () {
     return gulp.watch(
         [
             './resources/*.js',
-            './resources/components/*.js',
+            './resources/components/*.vue',
         ],
         [
             'webpack'

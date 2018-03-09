@@ -3,10 +3,13 @@ import App from './components/App.vue'
 
 // Vue.config.productionTip = false
 
-new Vue({
+// Vue.component('App', require('./components/App.vue'))
+
+const app = new Vue({
     el: '#app',
-    render: h => h(App)
-  })
+    render: h => h(App),
+});
+
   
 
-console.log('jigaro xar');
+console.log('jigaro  kaci');

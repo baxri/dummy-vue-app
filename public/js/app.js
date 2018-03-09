@@ -290,6 +290,29 @@ process.umask = function() { return 0; };
 //
 //
 //
+//
+//
+//
+
+module.exports = {
+    data: function data() {
+        return {
+            message: 'Helo App',
+            counter: 1
+        };
+    },
+
+    methods: {
+        plus: function plus() {
+            this.counter++;
+        },
+
+        minus: function minus() {
+            this.counter--;
+        }
+
+    }
+};
 
 /***/ }),
 /* 3 */
@@ -304,14 +327,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // Vue.config.productionTip = false
 
-new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
+// Vue.component('App', require('./components/App.vue'))
+
+var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
     el: '#app',
     render: function render(h) {
         return h(__WEBPACK_IMPORTED_MODULE_1__components_App_vue__["default"]);
     }
 });
 
-console.log('jigaro xar');
+console.log('jigaro  kaci');
 
 /***/ }),
 /* 4 */
@@ -11398,7 +11423,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_9_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_component_normalizer__ = __webpack_require__(9);
 var disposed = false
 /* script */
@@ -11417,8 +11442,8 @@ var __vue_module_identifier__ = null
 
 var Component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_component_normalizer__["a" /* default */])(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* render */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["b" /* staticRenderFns */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_9_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* render */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_42af3760_hasScoped_false_optionsId_9_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["b" /* staticRenderFns */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -11456,18 +11481,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("button", { on: { click: _vm.plus } }, [_vm._v("Plus")]),
+    _vm._v(" "),
+    _c("button", { on: { click: _vm.minus } }, [_vm._v("Minus")]),
+    _vm._v(" "),
+    _c("h1", [_vm._v(_vm._s(_vm.message))]),
+    _vm._v(" "),
+    _c("p", [_vm._v(_vm._s(_vm.counter))])
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "app" } }, [
-      _c("h1", [_vm._v("My Todo App!")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 if (false) {
