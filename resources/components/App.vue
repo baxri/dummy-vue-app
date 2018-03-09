@@ -8,7 +8,10 @@
 </template>
 
 <script>
-  module.exports = {
+  export default {
+    mounted() {
+        console.log('Component mounted.')
+    },
     data: function(){
        return {
            message: 'Helo App',

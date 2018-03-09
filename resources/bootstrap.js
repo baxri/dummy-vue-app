@@ -5,11 +5,15 @@ import App from './components/App.vue'
 
 // Vue.component('App', require('./components/App.vue'))
 
-const app = new Vue({
-    el: '#app',
-    render: h => h(App),
-});
+// register
+// Vue.component('my-component', 'App.')
 
+// create a root instance
+new Vue({
+    el: '#app',
+    template: '<App/>',
+    components: { App }
+})
   
 
 console.log('jigaro  kaci');
