@@ -6,5 +6,7 @@ new Vue({
     el: '#app',
     template: '<Counter/>',
     components: { Counter },
+    props: ['initcounter'],
+
 })
   
